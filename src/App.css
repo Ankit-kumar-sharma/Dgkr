@@ -425,7 +425,7 @@ section.banner {
   flex-direction: column;
   width: 50%;
   height: auto;
-  border: 1px dotted black;
+  /* border: 1px dotted black; */
 }
 input[type="text"] {
   border-radius: 2px;
