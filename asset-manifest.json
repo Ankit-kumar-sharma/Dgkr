@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Dgkr/static/css/main.047585df.chunk.css",
+    "main.js": "/Dgkr/static/js/main.3f7123bf.chunk.js",
+    "main.js.map": "/Dgkr/static/js/main.3f7123bf.chunk.js.map",
+    "runtime-main.js": "/Dgkr/static/js/runtime-main.c4b8321b.js",
+    "runtime-main.js.map": "/Dgkr/static/js/runtime-main.c4b8321b.js.map",
+    "static/js/2.f03ee4f7.chunk.js": "/Dgkr/static/js/2.f03ee4f7.chunk.js",
+    "static/js/2.f03ee4f7.chunk.js.map": "/Dgkr/static/js/2.f03ee4f7.chunk.js.map",
+    "index.html": "/Dgkr/index.html",
+    "precache-manifest.a6918fe28d2d5b2d9b939290979b9998.js": "/Dgkr/precache-manifest.a6918fe28d2d5b2d9b939290979b9998.js",
+    "service-worker.js": "/Dgkr/service-worker.js",
+    "static/css/main.047585df.chunk.css.map": "/Dgkr/static/css/main.047585df.chunk.css.map",
+    "static/media/App.css": "/Dgkr/static/media/banner.2490d707.jpg",
+    "static/media/logo.png": "/Dgkr/static/media/logo.66fbda94.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4b8321b.js",
+    "static/js/2.f03ee4f7.chunk.js",
+    "static/css/main.047585df.chunk.css",
+    "static/js/main.3f7123bf.chunk.js"
+  ]
+}
