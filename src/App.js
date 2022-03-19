@@ -1,6 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 const App = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [universityName, setUniversityName] = useState("");
+  const [cityName, setCityName] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [phone, setPhone] = useState("");
+  const [storageMedium, setStorageMedium] = useState("");
+  const [errors, setErrors] = useState("");
+  // const [status, setStatus] = useState(false);
+  function saveDataLocal(e) {
+    e.preventDefault();
+    if (
+      checkValidation(
+        firstName,
+        lastName,
+        universityName,
+        cityName,
+        zipCode,
+        phone,
+        storageMedium
+      )
+    ) {
+      alert("Successful!!!");
+    }
+    // console.log(name);
+  }
+  function checkValidation(
+    firstName,
+    lastName,
+    universityName,
+    cityName,
+    zipCode,
+    phone,
+    storageMedium
+  ) {
+    let formFields = {
+      firstName,
+      lastName,
+      universityName,
+      cityName,
+      zipCode,
+      phone,
+      storageMedium,
+    };
+    let errors = {};
+    let isValid = true;
+    if (formFields["firstName"].length === 0) {
+      isValid = false;
+      errors["firstName"] = "Firstname can't be empty.";
+    } else if (formFields["firstName"].length < 5) {
+      isValid = false;
+      errors["firstName"] = "Firstname should've atleast 5 char.";
+    }
+    if (formFields["lastName"].length === 0) {
+      isValid = false;
+      errors["lastName"] = "Lastname can't be empty.";
+    }
+    if (formFields["universityName"].length == 0) {
+      isValid = false;
+      errors["universityName"] = "Fill University name.";
+    }
+    if (formFields["cityName"].length == 0) {
+      isValid = false;
+      errors["cityName"] = "Fill city name.";
+    }
+    if (formFields["zipCode"].length == 0) {
+      isValid = false;
+      errors["zipCode"] = "Fill zip code.";
+    }
+    if (formFields["phone"].length == 0) {
+      isValid = false;
+      errors["phone"] = "Fill phone number.";
+    }
+    if (formFields["storageMedium"].length == 0) {
+      isValid = false;
+      errors["storageMedium"] = "Select appropriate storage medium.";
+    }
+    setErrors(errors);
+    return isValid;
+  }
   return (
     <main>
       <header>
@@ -44,50 +124,86 @@ const App = () => {
                   <div className="labelContainer">
                     <p>First name</p>
                   </div>
-                  <input type="text" />
-                  <p className="error"></p>
+                  <input
+                    type="text"
+                    value={firstName}
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                    }}
+                  />
+                  <p className="error">{errors["firstName"]}</p>
                 </div>
                 <div className="element">
                   <div className="labelContainer">
                     <p>Last name</p>
                   </div>
-                  <input type="text" />
-                  <p className="error"></p>
+                  <input
+                    type="text"
+                    value={lastName}
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }}
+                  />
+                  <p className="error">{errors["lastName"]}</p>
                 </div>
               </div>
 
               <div className="elementContainer">
                 <div className="element">
                   <div className="labelContainer">
-                    <p>Field 3</p>
+                    <p>University's Name</p>
                   </div>
-                  <input type="text" />
-                  <p className="error"></p>
+                  <input
+                    type="text"
+                    value={universityName}
+                    onChange={(e) => {
+                      setUniversityName(e.target.value);
+                    }}
+                  />
+                  <p className="error">{errors["universityName"]}</p>
                 </div>
                 <div className="element">
                   <div className="labelContainer">
-                    <p>Field 4</p>
+                    <p>City</p>
                   </div>
-                  <input type="text" />
-                  <p className="error"></p>
+                  <input
+                    type="text"
+                    value={cityName}
+                    onChange={(e) => {
+                      setCityName(e.target.value);
+                    }}
+                  />
+                  <p className="error">{errors["cityName"]}</p>
                 </div>
               </div>
 
-              <label style={{ marginTop: "60px" }}>Account Details</label>
+              <label style={{ marginTop: "10px" }}>Account Details</label>
               <div className="elementContainer">
                 <div className="element">
                   <div className="labelContainer">
-                    <p>Field 5</p>
+                    <p>Zip Code</p>
                   </div>
-                  <input type="text" />
-                  <p className="error"></p>
+                  <input
+                    type="text"
+                    value={zipCode}
+                    onChange={(e) => {
+                      setZipCode(e.target.value);
+                    }}
+                  />
+                  <p className="error">{errors["zipCode"]}</p>
                 </div>
                 <div className="element">
                   <div className="labelContainer">
-                    <p>Field 6</p>
+                    <p>Phone</p>
                   </div>
-                  <input type="text" />
-                  <p className="error"></p>
+                  <input
+                    type="text"
+                    value={phone}
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                    }}
+                  />
+                  <p className="error">{errors["phone"]}</p>
                 </div>
               </div>
 
@@ -99,20 +215,30 @@ const App = () => {
                   alignItems: "center",
                 }}
               >
-                <div className="labelContainer" style={{ marginTop: "40px" }}>
+                <div className="labelContainer" style={{ marginTop: "20px" }}>
                   <p>Storage Medium</p>
                 </div>
                 <div className="element">
-                  <select name="" id="" className="select">
-                    <option value="none" disabled>
+                  <select
+                    name=""
+                    id=""
+                    value={storageMedium}
+                    className="select"
+                    onChange={(e) => {
+                      setStorageMedium(e.target.value);
+                    }}
+                  >
+                    <option value={""} disabled>
                       --Select
                     </option>
                     <option value="localhost">Localhost</option>
                     <option value="firebase">Firebase</option>
                   </select>
-                  <p className="error"></p>
+                  <p className="error">{errors["storageMedium"]}</p>
                 </div>
-                <button className="submitBtn">Submit</button>
+                <button className="submitBtn" onClick={(e) => saveDataLocal(e)}>
+                  Submit
+                </button>
               </div>
             </form>
           </div>
