@@ -478,15 +478,18 @@ input[type="text"]:hover {
     display: none;
   }
   header {
+    border: none;
     height: 90px;
     justify-content: center;
   }
   section.banner {
+
     padding-right: 10px;
+    border: none;
     text-align: center;
     font-size: 35px;
     /* padding-left: 0px; */
-    background-size: cover;
+   background-image: url(./Images/banner4.jpg);
   }
   .mouse_scroll {
     margin-top: 40px;
