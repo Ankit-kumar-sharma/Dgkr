@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Dgkr/static/css/main.19e40e15.chunk.css",
+    "main.css": "/Dgkr/static/css/main.84d38c84.chunk.css",
     "main.js": "/Dgkr/static/js/main.3d6930f8.chunk.js",
     "main.js.map": "/Dgkr/static/js/main.3d6930f8.chunk.js.map",
     "runtime-main.js": "/Dgkr/static/js/runtime-main.c4b8321b.js",
@@ -8,16 +8,16 @@
     "static/js/2.f3c9f38c.chunk.js": "/Dgkr/static/js/2.f3c9f38c.chunk.js",
     "static/js/2.f3c9f38c.chunk.js.map": "/Dgkr/static/js/2.f3c9f38c.chunk.js.map",
     "index.html": "/Dgkr/index.html",
-    "precache-manifest.71942173829782ebfd91355a427298a2.js": "/Dgkr/precache-manifest.71942173829782ebfd91355a427298a2.js",
+    "precache-manifest.52a585abab5fe76b7f53f59d973a4358.js": "/Dgkr/precache-manifest.52a585abab5fe76b7f53f59d973a4358.js",
     "service-worker.js": "/Dgkr/service-worker.js",
-    "static/css/main.19e40e15.chunk.css.map": "/Dgkr/static/css/main.19e40e15.chunk.css.map",
-    "static/media/App.css": "/Dgkr/static/media/banner4.26ff778f.jpg",
+    "static/css/main.84d38c84.chunk.css.map": "/Dgkr/static/css/main.84d38c84.chunk.css.map",
+    "static/media/App.css": "/Dgkr/static/media/banner3.6901ebeb.jpg",
     "static/media/logo.png": "/Dgkr/static/media/logo.66fbda94.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c4b8321b.js",
     "static/js/2.f3c9f38c.chunk.js",
-    "static/css/main.19e40e15.chunk.css",
+    "static/css/main.84d38c84.chunk.css",
     "static/js/main.3d6930f8.chunk.js"
   ]
 }

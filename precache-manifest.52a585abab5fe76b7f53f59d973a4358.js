@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35baa5a9dfdf6092d8e93c165e709784",
+    "revision": "fc8fb33376140fc60de3b92554daff9d",
     "url": "/Dgkr/index.html"
   },
   {
-    "revision": "0c6c6396e957881141a0",
-    "url": "/Dgkr/static/css/main.19e40e15.chunk.css"
+    "revision": "63a210ce246b542a1252",
+    "url": "/Dgkr/static/css/main.84d38c84.chunk.css"
   },
   {
     "revision": "fb792086dfba6304a452",
     "url": "/Dgkr/static/js/2.f3c9f38c.chunk.js"
   },
   {
-    "revision": "0c6c6396e957881141a0",
+    "revision": "63a210ce246b542a1252",
     "url": "/Dgkr/static/js/main.3d6930f8.chunk.js"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dgkr/static/media/banner.2490d707.jpg"
   },
   {
-    "revision": "26ff778fb5d85985d54a4e41302b1662",
-    "url": "/Dgkr/static/media/banner4.26ff778f.jpg"
+    "revision": "6901ebeb78d4fba4c21ae1cc3e83c544",
+    "url": "/Dgkr/static/media/banner3.6901ebeb.jpg"
   },
   {
     "revision": "66fbda9447aa2b7c4e3adc89cf3eb7e0",
