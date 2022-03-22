@@ -1,7 +1,19 @@
 import React, { useState } from "react";
-import { FaPhoneAlt,FaAddressBook,FaCity,FaSearchLocation,FaSignature,FaUserGraduate,FaFileSignature,FaUserTie,FaDatabase} from "react-icons/fa";
-
+import {
+  FaPhoneAlt,
+  FaAddressBook,
+  FaCity,
+  FaSearchLocation,
+  FaSignature,
+  FaUserGraduate,
+  FaFileSignature,
+  FaUserTie,
+  FaDatabase,
+  FaRegPaperPlane,
+} from "react-icons/fa";
 import "./App.css";
+import db from "./firebase";
+
 const App = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,6 +26,7 @@ const App = () => {
   const [showBtn, setShowBtn] = useState("Show");
   const [click, setClick] = useState(false);
   let userDetails = new Array([]);
+
   const [displayStoredData, setDisplayStoredData] = useState(false);
 
   let localStorageContent = localStorage.getItem("userDetails");
@@ -56,7 +69,14 @@ const App = () => {
         storageMedium
       )
     ) {
-      alert("Successful Firebase!!!");
+      db.ref("userDetails/" + firstName).set({
+        FirstName: firstName,
+        LastName: lastName,
+        UniversityName: universityName,
+        CityName: cityName,
+        ZipCode: zipCode,
+        Phone: phone,
+      });
       setFirstName("");
       setLastName("");
       setUniversityName("");
@@ -220,11 +240,15 @@ const App = () => {
             <div className="informationBox1"></div>
             <div className="informationBox2">
               <form action="">
-                <label htmlFor=""><FaUserTie className="icon"></FaUserTie>Personal Details</label>
+                <label htmlFor="">
+                  <FaUserTie className="icon"></FaUserTie>Personal Details
+                </label>
                 <div className="elementContainer">
                   <div className="element">
                     <div className="labelContainer">
-                      <p><FaSignature className="icon"></FaSignature>First name</p>
+                      <p>
+                        <FaSignature className="icon"></FaSignature>First name
+                      </p>
                     </div>
                     <input
                       type="text"
@@ -232,12 +256,15 @@ const App = () => {
                       onChange={(e) => {
                         setFirstName(e.target.value);
                       }}
-                   />
+                    />
                     <p className="error">{errors["firstName"]}</p>
                   </div>
                   <div className="element">
                     <div className="labelContainer">
-                      <p><FaFileSignature className="icon"></FaFileSignature>Last name</p>
+                      <p>
+                        <FaFileSignature className="icon"></FaFileSignature>Last
+                        name
+                      </p>
                     </div>
                     <input
                       type="text"
@@ -253,7 +280,10 @@ const App = () => {
                 <div className="elementContainer">
                   <div className="element">
                     <div className="labelContainer">
-                      <p><FaUserGraduate className="icon"></FaUserGraduate>University's Name</p>
+                      <p>
+                        <FaUserGraduate className="icon"></FaUserGraduate>
+                        University's Name
+                      </p>
                     </div>
                     <input
                       type="text"
@@ -266,7 +296,9 @@ const App = () => {
                   </div>
                   <div className="element">
                     <div className="labelContainer">
-                      <p><FaCity className="icon"></FaCity>City</p>
+                      <p>
+                        <FaCity className="icon"></FaCity>City
+                      </p>
                     </div>
                     <input
                       type="text"
@@ -279,11 +311,17 @@ const App = () => {
                   </div>
                 </div>
 
-                <label style={{ marginTop: "10px" }}><FaAddressBook className="icon"></FaAddressBook>Address Details</label>
+                <label style={{ marginTop: "10px" }}>
+                  <FaAddressBook className="icon"></FaAddressBook>Address
+                  Details
+                </label>
                 <div className="elementContainer">
                   <div className="element">
                     <div className="labelContainer">
-                      <p><FaSearchLocation className="icon"></FaSearchLocation>Zip Code</p>
+                      <p>
+                        <FaSearchLocation className="icon"></FaSearchLocation>
+                        Zip Code
+                      </p>
                     </div>
                     <input
                       type="text"
@@ -296,7 +334,12 @@ const App = () => {
                   </div>
                   <div className="element">
                     <div className="labelContainer">
-                      <p><FaPhoneAlt style={{marginRight:"10px"}}></FaPhoneAlt>Phone</p>
+                      <p>
+                        <FaPhoneAlt
+                          style={{ marginRight: "10px" }}
+                        ></FaPhoneAlt>
+                        Phone
+                      </p>
                     </div>
                     <input
                       type="text"
@@ -318,7 +361,9 @@ const App = () => {
                   }}
                 >
                   <div className="labelContainer" style={{ marginTop: "20px" }}>
-                    <p><FaDatabase className="icon"></FaDatabase>Storage Medium</p>
+                    <p>
+                      <FaDatabase className="icon"></FaDatabase>Storage Medium
+                    </p>
                   </div>
                   <div className="element">
                     <select
@@ -342,6 +387,7 @@ const App = () => {
                     className="submitBtn"
                     onClick={(e) => storageMediumSelection(e)}
                   >
+                    <FaRegPaperPlane className="icon"></FaRegPaperPlane>{" "}
                     Register
                   </button>
                 </div>
@@ -374,6 +420,9 @@ const App = () => {
             : setDisplayStoredData(false)}
         </div>
       ) : null}
+      <footer>
+        <p>copyright@AnkitKumarSharma</p>
+      </footer>
     </>
   );
 };
