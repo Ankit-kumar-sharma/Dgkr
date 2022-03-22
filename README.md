@@ -4,7 +4,7 @@
 #simply copy the following link and paste in search bar of any browser.
 
 #Website URL: https://ankit-kumar-sharma.github.io/Dgkr/
-#Source code available at below github repository 
+#Source code available at 
 #GitHub Repository: https://github.com/Ankit-kumar-sharma/Dgkr
 
 
